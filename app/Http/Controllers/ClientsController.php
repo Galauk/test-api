@@ -21,3 +21,4 @@ class ClientsController extends Controller
         $clients = Clients::findOrFail($id);
         return $clients;
     }
+}

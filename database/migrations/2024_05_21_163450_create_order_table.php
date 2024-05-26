@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('order', function (Blueprint $table) {
             $table->id();
+            $table->foreign("id_client")->refences("id")->on("clients");
+            $table->foreign("id_prod")->refences("id")->on("products");
+            $table->integer("qtd");
             $table->timestamps();
         });
     }
